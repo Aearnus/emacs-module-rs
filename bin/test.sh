@@ -26,6 +26,9 @@ MODULE_RENAMED=test-module.so
 
 EMACS=emacs
 
+$EMACS --version
+echo "Testing $MODULE_DIR/$MODULE_RENAMED"
+
 RUST_BACKTRACE=0 $EMACS -batch -l ert \
               -l $MODULE_DIR/$MODULE_RENAMED \
               -l $MODULE_DIR/rs-module.so \
